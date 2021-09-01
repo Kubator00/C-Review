@@ -24,7 +24,7 @@ int allocArray2D(int ***array, unsigned int height, unsigned int width) {
 }
 
 void displayArray2D(int **array, unsigned int height, unsigned int width) {
-    if (array == NULL || height < 1 || width < 1)
+    if (array == NULL)
         return;
 
     for (unsigned int i = 0; i < height; i++) {
@@ -36,7 +36,7 @@ void displayArray2D(int **array, unsigned int height, unsigned int width) {
 }
 
 void destroyArray2D(int ***array, unsigned int height) {
-    if (array == NULL || *array == NULL || height < 1)
+    if (array == NULL || *array == NULL )
         return;
     for (unsigned int i = 0; i < height; i++) {
         free(*(*array + i));

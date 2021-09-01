@@ -26,7 +26,7 @@ int allocStringArray1D(char ***array, unsigned int height, unsigned int stringLe
 
 
 void displayStringArray1D(char **array, unsigned int height) {
-    if (array == NULL || height < 1)
+    if (array == NULL)
         return;
     for (unsigned int i = 0; i < height; i++) {
         printf("%s ", *(array + i));
@@ -35,7 +35,7 @@ void displayStringArray1D(char **array, unsigned int height) {
 }
 
 void destroyStringArray1D(char ***array, unsigned int height) {
-    if (array == NULL || *array == NULL || height < 1)
+    if (array == NULL || *array == NULL)
         return;
     for (unsigned int i = 0; i < height; i++) {
         free(*(*array + i));

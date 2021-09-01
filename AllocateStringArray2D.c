@@ -47,7 +47,7 @@ int allocStringArray2D(char ****array, unsigned int height, unsigned int width, 
 
 
 void displayStringArray2D(char ***array, unsigned int height, unsigned int width) {
-    if (array == NULL || *array == NULL || **array == NULL || height < 1 || width < 1)
+    if (array == NULL || *array == NULL || **array == NULL )
         return;
     for (unsigned int i = 0; i < height; i++) {
         for (unsigned int j = 0; j < width; j++) {
@@ -59,7 +59,7 @@ void displayStringArray2D(char ***array, unsigned int height, unsigned int width
 }
 
 void destroyStringArray2D(char ****array, unsigned int height, unsigned int width) {
-    if (array == NULL || *array == NULL || **array == NULL  || height < 1)
+    if (array == NULL || *array == NULL || **array == NULL )
         return;
     for (unsigned int i = 0; i < height; i++) {
         for (unsigned int j = 0; j < width; j++) {

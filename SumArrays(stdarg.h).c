@@ -3,14 +3,11 @@
 
 #define arrayLen 5
 
-int sumIntArrays1D(int n, ...) {
-    if (n < 1)
-        return -1;
-
+int sumIntArrays1D(unsigned n, ...) {
     va_list args;
     va_start(args, n);
     int sum = 0;
-    for (int i = 0; i < n; i++) {
+    for (unsigned i = 0; i < n; i++) {
         int *array = va_arg(args,int*);
         for (int j = 0; j < arrayLen; j++) {
             sum += array[j];

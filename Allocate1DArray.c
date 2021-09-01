@@ -13,7 +13,7 @@ int allocArray1D(int **array, unsigned int arrayLen) {
 }
 
 void displayArray1D(int *array, unsigned int arrayLen) {
-    if (array == NULL || arrayLen < 1)
+    if (array == NULL)
         return;
     for (unsigned int i = 0; i < arrayLen; i++)
         printf("%d ", *(array + i));
